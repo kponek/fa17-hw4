@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
   def index
     @cats = Cat.all
-    @users = User.all
     @todos = Todo.all
+    @users = User.all
   end
 
   def new
@@ -12,7 +12,6 @@ class HomeController < ApplicationController
   def create
     @todo = Todo.new(todo_params)
     @todo.save
-
     redirect_to '/'
   end
 
